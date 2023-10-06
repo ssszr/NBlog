@@ -27,7 +27,7 @@ const routes = [
 				path: 'dashboard',
 				name: 'Dashboard',
 				component: () => import('@/views/dashboard'),
-				meta: {title: 'Dashboard', icon: 'dashboard'}
+				meta: {title: '面板', icon: 'dashboard'}
 			}
 		]
 	},
@@ -36,7 +36,7 @@ const routes = [
 		name: 'Blog',
 		redirect: '/blog/write',
 		component: Layout,
-		meta: {title: '博客管理', icon: 'el-icon-menu'},
+		meta: {title: '文章管理', icon: 'el-icon-menu'},
 		children: [
 			{
 				path: 'write',
@@ -44,12 +44,12 @@ const routes = [
 				component: () => import('@/views/blog/blog/WriteBlog'),
 				meta: {title: '写文章', icon: 'el-icon-edit'}
 			},
-			{
-				path: 'moment/write',
-				name: 'WriteMoment',
-				component: () => import('@/views/blog/moment/WriteMoment'),
-				meta: {title: '写动态', icon: 'el-icon-edit'}
-			},
+			// {
+			// 	path: 'moment/write',
+			// 	name: 'WriteMoment',
+			// 	component: () => import('@/views/blog/moment/WriteMoment'),
+			// 	meta: {title: '写动态', icon: 'el-icon-edit'}
+			// },
 			{
 				path: 'edit/:id',
 				name: 'EditBlog',
@@ -57,25 +57,25 @@ const routes = [
 				meta: {title: '编辑文章', icon: 'el-icon-edit'},
 				hidden: true
 			},
-			{
-				path: 'moment/edit/:id',
-				name: 'EditMoment',
-				component: () => import('@/views/blog/moment/WriteMoment'),
-				meta: {title: '编辑动态', icon: 'el-icon-edit'},
-				hidden: true
-			},
+			// {
+			// 	path: 'moment/edit/:id',
+			// 	name: 'EditMoment',
+			// 	component: () => import('@/views/blog/moment/WriteMoment'),
+			// 	meta: {title: '编辑动态', icon: 'el-icon-edit'},
+			// 	hidden: true
+			// },
 			{
 				path: 'list',
 				name: 'BlogList',
 				component: () => import('@/views/blog/blog/BlogList'),
 				meta: {title: '文章管理', icon: 'el-icon-s-order'}
 			},
-			{
-				path: 'moment/list',
-				name: 'MomentList',
-				component: () => import('@/views/blog/moment/MomentList'),
-				meta: {title: '动态管理', icon: 'el-icon-chat-dot-round'}
-			},
+			// {
+			// 	path: 'moment/list',
+			// 	name: 'MomentList',
+			// 	component: () => import('@/views/blog/moment/MomentList'),
+			// 	meta: {title: '动态管理', icon: 'el-icon-chat-dot-round'}
+			// },
 			{
 				path: 'category/list',
 				name: 'CategoryList',
@@ -96,33 +96,33 @@ const routes = [
 			},
 		]
 	},
-	{
-		path: '/page',
-		name: 'Page',
-		redirect: '/page/site',
-		component: Layout,
-		meta: {title: '页面管理', icon: 'el-icon-document-copy'},
-		children: [
-			{
-				path: 'site',
-				name: 'SiteSetting',
-				component: () => import('@/views/page/SiteSetting'),
-				meta: {title: '站点设置', icon: 'bianjizhandian'}
-			},
-			{
-				path: 'friend',
-				name: 'FriendList',
-				component: () => import('@/views/page/FriendList'),
-				meta: {title: '友链管理', icon: 'friend'}
-			},
-			{
-				path: 'about',
-				name: 'About',
-				component: () => import('@/views/page/About'),
-				meta: {title: '关于我', icon: 'el-icon-tickets'}
-			},
-		]
-	},
+	// {
+	// 	path: '/page',
+	// 	name: 'Page',
+	// 	redirect: '/page/site',
+	// 	component: Layout,
+	// 	meta: {title: '页面管理', icon: 'el-icon-document-copy'},
+	// 	children: [
+	// 		{
+	// 			path: 'site',
+	// 			name: 'SiteSetting',
+	// 			component: () => import('@/views/page/SiteSetting'),
+	// 			meta: {title: '站点设置', icon: 'bianjizhandian'}
+	// 		},
+	// 		{
+	// 			path: 'friend',
+	// 			name: 'FriendList',
+	// 			component: () => import('@/views/page/FriendList'),
+	// 			meta: {title: '友链管理', icon: 'friend'}
+	// 		},
+	// 		{
+	// 			path: 'about',
+	// 			name: 'About',
+	// 			component: () => import('@/views/page/About'),
+	// 			meta: {title: '关于我', icon: 'el-icon-tickets'}
+	// 		},
+	// 	]
+	// },
 	{
 		path: '/pictureHosting',
 		name: 'PictureHosting',
